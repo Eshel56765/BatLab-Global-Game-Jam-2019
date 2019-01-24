@@ -64,3 +64,5 @@ crashlytics-build.properties
 /Library/StateCache/Hierarchy/13a848-mainStage.json
 /Library/StateCache/SceneView/2c329b-mainStage.json
 /Library/assetDatabase3
+*.exe0.log
+*.db
