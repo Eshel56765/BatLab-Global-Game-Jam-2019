@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
+    public event System.Action Faild;
+
     public Image Timer;
     public float StartingTime;
     public float Minutes, Seconds;
@@ -40,5 +42,8 @@ public class TimerController : MonoBehaviour
             yield return null;
         }
         while (Timer.fillAmount > 0);
+
+        if (Faild != null)
+            Faild();
     }
 }

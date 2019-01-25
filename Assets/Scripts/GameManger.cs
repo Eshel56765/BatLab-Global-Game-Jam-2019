@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManger : MonoBehaviour
 {
-
+    public CashManager CashManager;
     public FadeInFadeOut FadeInFadeOut;
+    public TimerController TimerController;
 
     public static GameManger instance=null;
     // Start is called before the first frame update
@@ -26,6 +27,14 @@ public class GameManger : MonoBehaviour
     {
         CursorLockManager.ReleaseMouse(this);
         RenderSettings.fog = false;
+        TimerController.Faild += HeFaildBigTime;
+        
+    }
+
+    private void HeFaildBigTime()
+    {
+        CashManager.AddMoney(-100);
+        TimerController.gameObject.SetActive(false);
     }
 
     private void Update()
