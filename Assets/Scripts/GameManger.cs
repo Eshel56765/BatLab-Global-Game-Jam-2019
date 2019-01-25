@@ -8,6 +8,8 @@ public class GameManger : MonoBehaviour
     public FadeInFadeOut FadeInFadeOut;
     public TimerController TimerController;
 
+    public List<GameObject> ProblemsTriggers = new List<GameObject>();
+
     public int TheMoneysOfAwsome = 0;
 
     public static GameManger instance=null;
