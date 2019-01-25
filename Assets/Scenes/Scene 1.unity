@@ -3254,6 +3254,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348443576}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!198 &378777755 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3075578984456232458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &384663407
 GameObject:
   m_ObjectHideFlags: 0
@@ -5587,7 +5593,7 @@ PrefabInstance:
     - target: {fileID: 6325156461844171393, guid: ab92a1a91b0def24db7fce4c08153fbb,
         type: 3}
       propertyPath: StartingTime
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab92a1a91b0def24db7fce4c08153fbb, type: 3}
@@ -5645,6 +5651,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656623845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5092444295069287955, guid: 77e86a6fee02d0649b650e5a0fcef302,
+    type: 3}
+  m_PrefabInstance: {fileID: 1882548589}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &663611994
 GameObject:
   m_ObjectHideFlags: 0
@@ -14715,6 +14733,21 @@ PrefabInstance:
     - target: {fileID: 5092444293180498995, guid: 77e86a6fee02d0649b650e5a0fcef302,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092444293180499004, guid: 77e86a6fee02d0649b650e5a0fcef302,
+        type: 3}
+      propertyPath: MoneysExplosion
+      value: 
+      objectReference: {fileID: 378777755}
+    - target: {fileID: 5092444293180499004, guid: 77e86a6fee02d0649b650e5a0fcef302,
+        type: 3}
+      propertyPath: CashImage
+      value: 
+      objectReference: {fileID: 656623845}
+    - target: {fileID: 5092444294342768735, guid: 77e86a6fee02d0649b650e5a0fcef302,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
