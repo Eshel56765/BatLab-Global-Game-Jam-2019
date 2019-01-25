@@ -8,6 +8,8 @@ public class GameManger : MonoBehaviour
     public FadeInFadeOut FadeInFadeOut;
     public TimerController TimerController;
 
+    public int TheMoneysOfAwsome = 0;
+
     public static GameManger instance=null;
     // Start is called before the first frame update
     void Awake()
