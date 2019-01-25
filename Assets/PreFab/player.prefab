@@ -288,7 +288,7 @@ Animator:
   m_GameObject: {fileID: 4934716852959350967}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 21aeaaafc32ba2540a64a588f821a8c1, type: 2}
+  m_Controller: {fileID: 9100000, guid: e5e983e6c460ece4b95fc7b24dd9b86d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -540,7 +540,7 @@ Transform:
   m_GameObject: {fileID: 4934716853981512921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.175, y: 0.437, z: 0.413}
-  m_LocalScale: {x: 0.15, y: 0.39002514, z: 0.08}
+  m_LocalScale: {x: 0.15, y: 0.39, z: 0.08}
   m_Children: []
   m_Father: {fileID: 4934716852959350960}
   m_RootOrder: 0
@@ -831,7 +831,7 @@ Animator:
   m_GameObject: {fileID: 4934716854564254174}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0896b8cd16ddc3244821694ff2764bde, type: 2}
+  m_Controller: {fileID: 9100000, guid: 30f4e26ae83aed344901c557b4470173, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
