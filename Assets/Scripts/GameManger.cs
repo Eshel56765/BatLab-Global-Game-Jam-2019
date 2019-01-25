@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManger : MonoBehaviour
 {
+
+    public FadeInFadeOut FadeInFadeOut;
+
     public static GameManger instance=null;
     // Start is called before the first frame update
     void Awake()
@@ -23,9 +26,12 @@ public class GameManger : MonoBehaviour
     {
         RenderSettings.fog = false;
     }
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.F) && FadeInFadeOut.CanGoToWork && !FadeInFadeOut.IsFading)
+        {
+            StartCoroutine(FadeInFadeOut.FadeOut());
+        }
     }
 }

@@ -14,13 +14,7 @@ public class FadeInFadeOut : MonoBehaviour
 
     public Image BlackScreen;
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            StartCoroutine(FadeOut());
-        }
-    }
+   
 
     public void OnTriggerEnter(Collider collider)
     {
@@ -38,7 +32,7 @@ public class FadeInFadeOut : MonoBehaviour
         }
     }
 
-    IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
@@ -46,22 +40,20 @@ public class FadeInFadeOut : MonoBehaviour
             yield return null;
         }
         BlackScreen.fillAmount = 0;
+        cashManager.AddMoney(100);
         IsFading = false;
     }
 
-    IEnumerator FadeOut()
+    public IEnumerator FadeOut()
     {
-        if (CanGoToWork && !IsFading)
-        {
+        
             for (float i = 0; i <= 1; i += Time.deltaTime)
             {
                 BlackScreen.fillAmount = Mathf.Clamp01(i);
                 IsFading = true;
                 yield return null;
             }
-            BlackScreen.fillAmount = 1;
-            StartCoroutine(FadeIn());
-        }
+        BlackScreen.fillAmount = 1;
     }
 
 }

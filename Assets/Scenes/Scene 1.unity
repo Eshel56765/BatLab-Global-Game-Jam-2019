@@ -969,6 +969,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: FadeInFadeOut
+      value: 
+      objectReference: {fileID: 1411120111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84791cd729d63ad4eb1cfc19e5fedc9f, type: 3}
 --- !u!1 &97071462
@@ -10295,7 +10300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca90af6fb65c6843b5ecd0d67b8454b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanGoToWork: 1
+  CanGoToWork: 0
   IsFading: 0
   PlayerBodyCol: {fileID: 522826023}
   cashManager: {fileID: 1780708087}
