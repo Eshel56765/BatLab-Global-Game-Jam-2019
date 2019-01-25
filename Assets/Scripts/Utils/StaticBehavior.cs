@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticBehavior : MonoBehaviour
+public abstract class StaticBehavior<T> : MonoBehaviour where T : StaticBehavior<T>
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameObject StaticObject
     {
+        get
+        {
+            if (null == staticObject)
+                staticObject = new GameObject("Globals");
+            return StaticObject;
+        }
+    }
+    private static GameObject staticObject;
         
+    public static T Instance
+    {
+        get
+        {
+            if (null == t)
+                t = StaticObject.AddComponent<T>();
+            return t;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private static T t;
 }
+
