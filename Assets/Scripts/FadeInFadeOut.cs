@@ -46,13 +46,12 @@ public class FadeInFadeOut : MonoBehaviour
 
     public IEnumerator FadeOut()
     {
-        
-            for (float i = 0; i <= 1; i += Time.deltaTime)
-            {
-                BlackScreen.fillAmount = Mathf.Clamp01(i);
-                IsFading = true;
-                yield return null;
-            }
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            BlackScreen.fillAmount = Mathf.Clamp01(i);
+            IsFading = true;
+            yield return null;
+        }
         BlackScreen.fillAmount = 1;
     }
 
