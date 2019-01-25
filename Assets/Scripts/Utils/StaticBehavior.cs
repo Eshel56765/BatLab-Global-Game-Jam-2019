@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class StaticBehavior<T> : MonoBehaviour where T : StaticBehavior<T>
 {
-    public static GameObject StaticObject
+    protected static GameObject StaticObject
     {
         get
         {
