@@ -4,19 +4,12 @@ using UnityEngine;
 
 public abstract class Minigame : MonoBehaviour
 {
-    public GameObject UI;
+    public abstract void StartGame();
 
-    // Start is called before the first frame update
-    void StartGame()
-    {
-        
-    }
+    public abstract void EndGame();
+    
+    public abstract bool HasEnded { get; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected abstract void EndGame();
+    public bool MinigameStarted;
+    public float TimeStarted;
 }
