@@ -6,8 +6,12 @@ public abstract class Minigame : MonoBehaviour
 {
     public abstract void StartGame();
 
-    public abstract void EndGame();
-    
+    public virtual void EndGame()
+    {
+        OnGameEnd?.Invoke();
+    }
+    public event System.Action OnGameEnd;
+
     public abstract bool HasEnded { get; }
 
     public bool MinigameStarted;

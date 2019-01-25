@@ -61,6 +61,7 @@ public class PipeMinigamePipe : MonoBehaviour, IPointerClickHandler
     private void EmptyPipesRecursively()
     {
         SetFill(FillType.None);
+        fillCoroutine = null;
         while (sourcedPipes.Count > 0)
         {
             PipeMinigamePipe pipe = sourcedPipes[0];
@@ -116,7 +117,20 @@ public class PipeMinigamePipe : MonoBehaviour, IPointerClickHandler
         {
             Nodes = Nodes & ~NewNodes;
         }
-        UpdateNodes(); 
+        UpdateNodes();
+    }
+
+    private void SetTypesWithoutUpdate(PipeNodes NewNodes, bool Active)
+    {
+        SetFill(FillType.None);
+        if (Active)
+        {
+            Nodes = Nodes | NewNodes;
+        }
+        else
+        {
+            Nodes = Nodes & ~NewNodes;
+        }
     }
 
     private void UpdateNodes()
@@ -227,7 +241,21 @@ public class PipeMinigamePipe : MonoBehaviour, IPointerClickHandler
     void Update()
     {
         if (this == Selected)
+        {
             transform.position = Input.mousePosition + new Vector3(-50, 50);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Rotate();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            if (null != Selected)
+            {
+                Selected.Element.enabled = true;
+                Selected = null;
+            }
+        }
     }
 
     public void SetFill(FillType type)
@@ -316,6 +344,15 @@ public class PipeMinigamePipe : MonoBehaviour, IPointerClickHandler
                     return;
                 }
         }
+    }
+
+    public void Rotate()
+    {
+        bool hadLeft = HasNode(PipeNodes.Left);
+        SetTypesWithoutUpdate(PipeNodes.Left, HasNode(PipeNodes.Bottom));
+        SetTypesWithoutUpdate(PipeNodes.Bottom, HasNode(PipeNodes.Right));
+        SetTypesWithoutUpdate(PipeNodes.Right, HasNode(PipeNodes.Top));
+        SetTypes(PipeNodes.Top, hadLeft);
     }
 
     private IEnumerator StartFill()

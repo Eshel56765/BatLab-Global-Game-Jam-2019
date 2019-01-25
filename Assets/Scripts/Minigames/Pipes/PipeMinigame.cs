@@ -17,7 +17,12 @@ public class PipeMinigame : Minigame
     [System.Serializable] public struct Point { public int x, y; }
     private float timeSinceLastUpdate;
 
-    public Point Start, End;
+    public Point StartPoint, EndPoint;
+
+    private void Start()
+    {
+        StartGame();
+    }
 
     // Start is called before the first frame update
     public override void StartGame()
@@ -83,11 +88,11 @@ public class PipeMinigame : Minigame
                 }
                 else
                 {
-                    if (x == End.x && y == End.y)
+                    if (x == EndPoint.x && y == EndPoint.y)
                     {
                         Instantiate(EndPrefab, transform);
                     }
-                    else if (x == Start.x && y == Start.y)
+                    else if (x == StartPoint.x && y == StartPoint.y)
                     {
                         Instantiate(StartPrefab, transform);
                     }
@@ -108,10 +113,10 @@ public class PipeMinigame : Minigame
     {
         if (!MinigameStarted || Time.time - TimeStarted < 3)
             return;
-        if (Time.time - timeSinceLastUpdate > 1)
+        if (Time.time - timeSinceLastUpdate > 0.5f)
         {
             timeSinceLastUpdate = Time.time;
-            Pipes[Start.x, Start.y - 1].SetFill(PipeMinigamePipe.FillType.BottomUp);
+            Pipes[StartPoint.x, StartPoint.y - 1].SetFill(PipeMinigamePipe.FillType.BottomUp);
             for (int y = 0; y < Height; y++)
             {
                 for (int x = 0; x < Width; x++)
@@ -120,7 +125,7 @@ public class PipeMinigame : Minigame
                     {
                         if (0 < x && Pipes[x -1, y].HasNode(PipeMinigamePipe.PipeNodes.Right) && Pipes[x, y].HasNode(PipeMinigamePipe.PipeNodes.Left))
                         {
-                            Pipes[x - 1, y].SetFill(PipeMinigamePipe.FillType.LTR);
+                            Pipes[x - 1, y].SetFill(PipeMinigamePipe.FillType.RTL);
                             Pipes[x, y].sourcedPipes.Add(Pipes[x - 1, y]);
                         }
                     }
@@ -149,6 +154,10 @@ public class PipeMinigame : Minigame
                         }
                     }
                 }
+                if (Pipes[EndPoint.x - 1, EndPoint.y].HasNode(PipeMinigamePipe.PipeNodes.Right) && Pipes[EndPoint.x - 1, EndPoint.y].WaterisThrough(PipeMinigamePipe.PipeNodes.Right))
+                {
+                    EndGame();
+                }
             }
         }
     }
@@ -161,22 +170,23 @@ public class PipeMinigame : Minigame
         ThreePipesAmount = Mathf.Clamp(ThreePipesAmount, 0, Amount - StraightPipesAmount - TurnPipesAmount);
 
         FourPipesAmount = Amount - StraightPipesAmount - TurnPipesAmount - ThreePipesAmount;
-        End.x = Width;
-        End.y = Mathf.Clamp(End.y, 0, Height);
-        Start.x = Mathf.Clamp(Start.x, 0, Width);
-        Start.y = Height;
+        EndPoint.x = Width;
+        EndPoint.y = Mathf.Clamp(EndPoint.y, 0, Height);
+        StartPoint.x = Mathf.Clamp(StartPoint.x, 0, Width);
+        StartPoint.y = Height;
     }
 
     public override void EndGame()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
+        base.EndGame();
     }
 
     override public bool HasEnded
     {
         get
         {
-            return Pipes[End.x - 1, End.y].WaterisThrough(PipeMinigamePipe.PipeNodes.Right);
+            return Pipes[EndPoint.x - 1, EndPoint.y].WaterisThrough(PipeMinigamePipe.PipeNodes.Right);
         }
     }
 
