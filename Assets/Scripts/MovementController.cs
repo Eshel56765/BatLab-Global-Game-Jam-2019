@@ -23,10 +23,12 @@ public class MovementController : MonoBehaviour
         Vector3 cameraRight = PlayerCamera.transform.right;
         cameraRight.y = 0;
         cameraRight.Normalize();
-        velocity = Input.GetAxis("Vertical") * cameraForward ;
-        velocity += Input.GetAxis("Horizontal") * cameraRight ;
-        Debug.Log(velocity);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(velocity), 720 * Time.deltaTime);
-        rigidBody.velocity = velocity * Speed;
+        velocity = Input.GetAxis("Vertical") * cameraForward;
+        velocity += Input.GetAxis("Horizontal") * cameraRight;
+        if (velocity != Vector3.zero)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(velocity), 720 * Time.deltaTime);
+            rigidBody.velocity = velocity * Speed;
+        }
     }
 }
