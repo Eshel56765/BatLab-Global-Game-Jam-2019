@@ -10,7 +10,7 @@ public abstract class StaticBehavior<T> : MonoBehaviour where T : StaticBehavior
         {
             if (null == staticObject)
                 staticObject = new GameObject("Globals");
-            return StaticObject;
+            return staticObject;
         }
     }
     private static GameObject staticObject;

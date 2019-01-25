@@ -24,6 +24,7 @@ public class GameManger : MonoBehaviour
     }
     private void Start()
     {
+        CursorLockManager.ReleaseMouse(this);
         RenderSettings.fog = false;
     }
 
