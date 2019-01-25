@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class FadeInFadeOut : MonoBehaviour
 {
     public bool CanGoToWork;
-    public bool CanFade;
+    public bool IsFading = false;
     public Collider PlayerBodyCol;
 
     public CashManager cashManager;
@@ -46,17 +46,17 @@ public class FadeInFadeOut : MonoBehaviour
             yield return null;
         }
         BlackScreen.fillAmount = 0;
-        CanFade = true;
+        IsFading = false;
     }
 
     IEnumerator FadeOut()
     {
-        if (CanGoToWork && CanFade)
+        if (CanGoToWork && !IsFading)
         {
             for (float i = 0; i <= 1; i += Time.deltaTime)
             {
                 BlackScreen.fillAmount = Mathf.Clamp01(i);
-                CanFade = false;
+                IsFading = true;
                 yield return null;
             }
             BlackScreen.fillAmount = 1;
