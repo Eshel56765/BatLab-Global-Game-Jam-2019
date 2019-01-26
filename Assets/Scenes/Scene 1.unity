@@ -1785,8 +1785,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107917244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.59, y: 1.42, z: 7.7630005}
-  m_LocalScale: {x: 1, y: 0.06567, z: 1}
+  m_LocalPosition: {x: 2.136, y: 1.42, z: 7.763}
+  m_LocalScale: {x: 0.092, y: 0.06567, z: 1}
   m_Children: []
   m_Father: {fileID: 1868944885}
   m_RootOrder: 14
@@ -7688,8 +7688,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566176761}
   m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 6.625662, y: 6.6151, z: 3.2829921}
-  m_LocalScale: {x: 0.2685, y: 3.3852036, z: 5.4239497}
+  m_LocalPosition: {x: 7.476, y: 6.6151, z: 3.2829921}
+  m_LocalScale: {x: 0.2685, y: 3.3852036, z: 3.7262533}
   m_Children: []
   m_Father: {fileID: 1637457450}
   m_RootOrder: 6
@@ -33108,8 +33108,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906960325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5899997, y: 1.42, z: 11.760001}
-  m_LocalScale: {x: 1, y: 0.06567, z: 1}
+  m_LocalPosition: {x: 2.136, y: 1.42, z: 11.760001}
+  m_LocalScale: {x: 0.092, y: 0.06567, z: 1}
   m_Children: []
   m_Father: {fileID: 1868944885}
   m_RootOrder: 22
@@ -45324,8 +45324,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137000551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.7281613, y: 6.6105, z: -2.874}
-  m_LocalScale: {x: 0.2685, y: 3.3757758, z: 5.423945}
+  m_LocalPosition: {x: 5.7281613, y: 6.6105, z: -2.9074}
+  m_LocalScale: {x: 0.2685, y: 3.3757758, z: 5.4906597}
   m_Children: []
   m_Father: {fileID: 1637457450}
   m_RootOrder: 0
@@ -45748,6 +45748,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MakeItRain
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
         type: 3}
