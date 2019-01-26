@@ -11,8 +11,8 @@ public class TimerController : MonoBehaviour
     public float StartingTime;
     public float Minutes, Seconds;
     public Text MinutesText, SecondsText;
-    
-    private float timeElapsed, totalTime;
+    [HideInInspector]
+    public float timeElapsed, totalTime ,TimePassed;
 
     void Start()
     {
@@ -22,12 +22,13 @@ public class TimerController : MonoBehaviour
         StartCoroutine(ClocksTicking());
     }
 
-    IEnumerator ClocksTicking()
+    public IEnumerator ClocksTicking()
     {
         do
         {
             timeElapsed += Time.deltaTime;
-            Timer.fillAmount = Mathf.Clamp01((totalTime - timeElapsed) / totalTime);
+            TimePassed = Mathf.Clamp01((totalTime - timeElapsed) / totalTime);
+            Timer.fillAmount = TimePassed;
             Minutes = Mathf.Clamp(Mathf.FloorToInt((totalTime - timeElapsed) / 60f),0,Mathf.Infinity);
             Seconds = Mathf.Clamp(Mathf.FloorToInt((totalTime - timeElapsed) % 60f), 0, Mathf.Infinity);
 
@@ -45,5 +46,12 @@ public class TimerController : MonoBehaviour
 
         if (Faild != null)
             Faild();
+    }
+
+    public void ResetTime()
+    {
+        totalTime = StartingTime;
+        timeElapsed = 0;
+        Timer.fillAmount = 1;
     }
 }

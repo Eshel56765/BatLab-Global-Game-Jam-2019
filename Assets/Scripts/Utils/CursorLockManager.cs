@@ -18,7 +18,7 @@ public class CursorLockManager : StaticBehavior<CursorLockManager>
     {
         if (!Instance.Users.Contains(Caller))
             Instance.Users.Add(Caller);
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.None;
     }
     public static void ReleaseMouse(object Caller)
     {

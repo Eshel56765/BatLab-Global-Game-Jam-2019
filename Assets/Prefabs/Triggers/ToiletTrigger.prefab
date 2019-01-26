@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2633862814531866004}
   - component: {fileID: 7497621736302250031}
+  - component: {fileID: 7148419088467894985}
   m_Layer: 0
   m_Name: ToiletTrigger
   m_TagString: Untagged
@@ -39,8 +40,21 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4298296265585637793}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.6805944, y: 1.9969082, z: 3.9246187}
   m_Center: {x: 0.10689007, y: 0.4984541, z: 1.4623095}
+--- !u!114 &7148419088467894985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298296265585637793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23861a01bb7bfa4d9dec62e084373e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MiniGamePrefab: {fileID: 0}

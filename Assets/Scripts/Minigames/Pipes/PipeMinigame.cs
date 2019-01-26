@@ -22,6 +22,7 @@ public class PipeMinigame : Minigame
     private void Start()
     {
         StartGame();
+        CursorLockManager.UseMouse(this);
     }
 
     // Start is called before the first frame update
@@ -178,8 +179,19 @@ public class PipeMinigame : Minigame
 
     public override void EndGame()
     {
-        Destroy(transform.parent.gameObject);
-        base.EndGame();
+        if (MinigameStarted)
+        {
+            GameManger.Instance.ProblemsTriggers[GameManger.Instance.RandomProblem].ProblemParticleSystem.Stop();
+            GameManger.Instance.TimerController.StopCoroutine(GameManger.Instance.TimerController.ClocksTicking());
+            GameManger.Instance.FixedProblem = true;
+            StartCoroutine(GameManger.Instance.ProblemFixedTextShower());
+
+            MinigameStarted = false;
+            GameManger.Instance.CashManager.AddMoney((int)(GameManger.Instance.TimerController.TimePassed * 100));
+            Destroy(transform.parent.gameObject);
+            CursorLockManager.ReleaseMouse(this);
+            base.EndGame();
+        }
     }
 
     override public bool HasEnded

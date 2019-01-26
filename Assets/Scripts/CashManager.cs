@@ -19,23 +19,37 @@ public class CashManager : MonoBehaviour
         StartingColorCashImage = CashImage.color;
     }
 
-    public void AddMoney(int Amount)
+    private void Update()
     {
-        if (GameManger.instance.TheMoneysOfAwsome + Amount >= maxAmountOfMoneys)
-            return;
-         
-        Cash.text = (GameManger.instance.TheMoneysOfAwsome + Amount).ToString("D5");
-        GameManger.instance.TheMoneysOfAwsome += Amount;
-        if (GameManger.instance.TheMoneysOfAwsome < 0)
+        if (GameManger.Instance.TheMoneysOfAwsome < 0)
         {
-            Cash.color = Color.red;
-            CashImage.color = Color.red;
+            ChangeColorRed();
         }
         else
         {
-            Cash.color = startingColorText;
-            CashImage.color = startingColorText;
+            ResetColor();
         }
+    }
+
+    public void AddMoney(int Amount)
+    {
+        if (GameManger.Instance.TheMoneysOfAwsome + Amount >= maxAmountOfMoneys)
+            return;
+
+        Cash.text = (GameManger.Instance.TheMoneysOfAwsome + Amount).ToString("D5");
+        GameManger.Instance.TheMoneysOfAwsome += Amount;
+       
         MoneysExplosion.Play();
+    }
+
+    public void ChangeColorRed()
+    {
+        Cash.color = Color.red;
+        CashImage.color = Color.red;
+    }
+    public void ResetColor()
+    {
+        Cash.color = startingColorText;
+        CashImage.color = startingColorText;
     }
 }

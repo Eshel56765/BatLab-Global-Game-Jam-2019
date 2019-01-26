@@ -28,6 +28,7 @@ public class MovementController : MonoBehaviour
         if (velocity != Vector3.zero)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(velocity), 720 * Time.deltaTime);
+            velocity.y = rigidBody.velocity.y / Speed;
             rigidBody.velocity = velocity * Speed;
         }
     }
