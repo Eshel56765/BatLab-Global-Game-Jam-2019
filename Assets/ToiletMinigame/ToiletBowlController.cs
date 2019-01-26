@@ -10,6 +10,7 @@ public class ToiletBowlController : MonoBehaviour
     public float Speed;
     public GameObject SplashParticleSystem;
     public Transform SplashZone;
+    public SplashOnCanvas SplashOnCanvas;
     private RectTransform RectTransform;
 
     public event Action Catch;
@@ -40,7 +41,6 @@ public class ToiletBowlController : MonoBehaviour
 
         Catch?.Invoke();
 
-        Instantiate(SplashParticleSystem, SplashZone);
-        SplashParticleSystem.GetComponent<ParticleSystem>().Play();
+        SplashOnCanvas.Splash(transform);
     }
 }

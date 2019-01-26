@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ToiletMinigameManager : MonoBehaviour
+public class ToiletMinigameManager : Minigame
 {
 
     public ToiletBowlController ToiletBowlController;
@@ -20,20 +20,30 @@ public class ToiletMinigameManager : MonoBehaviour
         PumpsText.text = "Only " + "<color=red>" + CatchCounter + "</color>" + " More To Release The Blockage";
     }
 
+    public override void StartGame()
+    {
+        CursorLockManager.UseMouse(this);
+    }
+
+    public override void EndGame()
+    {
+        CursorLockManager.ReleaseMouse(this);
+        base.EndGame();
+    }
+
+    public override bool HasEnded => CatchCounter == 0;
+
     private void CatchCallback()
     {
+        if (CatchCounter == 0) return;
+
         CatchCounter--;//"<color=yellow>"+normalWord[i]+"</color>"
 
         PumpsText.text = "Only " + "<color=red>" + CatchCounter + "</color>" + " More To Release The Blockage";
 
-        if(CatchCounter == 0)
+        if(HasEnded)
         {
-            Win();
+            EndGame();
         }
-    }
-
-    private void Win()
-    {
-        throw new NotImplementedException();
     }
 }
