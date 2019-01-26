@@ -37,7 +37,7 @@ public class GameManger : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if(Instance==null)
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -79,7 +79,7 @@ public class GameManger : MonoBehaviour
                 MoneyFromWorkText.SetActive(false);
                 yield return new WaitForSeconds(1f);
 
-                
+
                 TimerController.ResetTime();
                 CashManager.gameObject.SetActive(true);
                 StartCoroutine(RandomaizeGame());
@@ -87,8 +87,8 @@ public class GameManger : MonoBehaviour
                 CashManager.AddMoney(100);
             }
 
-            
-            if(PlayerTarnsform.position.y < -10)
+
+            if (PlayerTarnsform.position.y < -10)
             {
                 PlayerTarnsform.position = new Vector3(1.62f, 1.16f, 1.834f);
             }

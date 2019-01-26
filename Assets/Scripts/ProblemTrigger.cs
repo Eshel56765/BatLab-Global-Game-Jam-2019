@@ -8,11 +8,15 @@ public class ProblemTrigger : MonoBehaviour
     private Collider problemCollider;
 
     private GameObject CurrentGame;
+    private AudioSource ProblemSound;
 
     // Start is called before the first frame update
     void Start()
     {
         problemCollider = gameObject.GetComponent<Collider>();
+        ProblemSound = gameObject.GetComponent<AudioSource>();
+        ProblemSound.Play();
+
     }
 
     private void OnTriggerStay(Collider Col)
@@ -20,6 +24,7 @@ public class ProblemTrigger : MonoBehaviour
         if (Col.CompareTag("Player") && Input.GetKeyDown(KeyCode.F) && CurrentGame == null)
         {
             CurrentGame = Instantiate(MiniGamePrefab, GameManger.Instance.UICanvas);
+            ProblemSound.Stop();
         }
     }
 }

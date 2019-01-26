@@ -124,7 +124,7 @@ public class PipeMinigame : Minigame
                 {
                     if (Pipes[x, y].WaterisThrough(PipeMinigamePipe.PipeNodes.Left))
                     {
-                        if (0 < x && Pipes[x -1, y].HasNode(PipeMinigamePipe.PipeNodes.Right) && Pipes[x, y].HasNode(PipeMinigamePipe.PipeNodes.Left))
+                        if (0 < x && Pipes[x - 1, y].HasNode(PipeMinigamePipe.PipeNodes.Right) && Pipes[x, y].HasNode(PipeMinigamePipe.PipeNodes.Left))
                         {
                             Pipes[x - 1, y].SetFill(PipeMinigamePipe.FillType.RTL);
                             Pipes[x, y].sourcedPipes.Add(Pipes[x - 1, y]);
@@ -187,7 +187,7 @@ public class PipeMinigame : Minigame
             StartCoroutine(GameManger.Instance.ProblemFixedTextShower());
             GameManger.Instance.TimerController.StopTimer();
 
-            Destroy(GameManger.Instance.CurrentProblemTrigger);
+            GameManger.Instance.CurrentProblemTrigger.gameObject.SetActive(false);
 
             MinigameStarted = false;
             GameManger.Instance.CashManager.AddMoney((int)(GameManger.Instance.TimerController.TimePassed * 100));

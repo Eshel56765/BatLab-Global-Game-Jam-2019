@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8688599462787907666
+--- !u!1 &2519082050692292720
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,72 +8,72 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 433090900394638575}
-  - component: {fileID: 4714355798104524017}
-  - component: {fileID: 1329247479315368849}
-  - component: {fileID: 1689427494280006136}
+  - component: {fileID: 1616506704539868219}
+  - component: {fileID: 8342658769822268891}
+  - component: {fileID: 860421303039879034}
+  - component: {fileID: 4699878362442595910}
   m_Layer: 0
-  m_Name: TapTrigger
+  m_Name: FireTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &433090900394638575
+--- !u!4 &1616506704539868219
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8688599462787907666}
+  m_GameObject: {fileID: 2519082050692292720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5168695, y: 0.26139998, z: -0.97900003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 11.88135, y: 0.5056348, z: 10.470471}
+  m_LocalScale: {x: 1.41928, y: 1.2003299, z: 1.1064638}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4714355798104524017
+--- !u!65 &8342658769822268891
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8688599462787907666}
+  m_GameObject: {fileID: 2519082050692292720}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6362624, y: 0.86266565, z: 2.063435}
-  m_Center: {x: 0.3181312, y: 0.06866717, z: 0.0032582283}
---- !u!114 &1329247479315368849
+  m_Size: {x: 1.8511117, y: 0.4970253, z: 1.2711658}
+  m_Center: {x: -0.00577568, y: -0.2514873, z: 0.13558263}
+--- !u!114 &860421303039879034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8688599462787907666}
+  m_GameObject: {fileID: 2519082050692292720}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b23861a01bb7bfa4d9dec62e084373e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MiniGamePrefab: {fileID: 7889421248274862440, guid: 53e2066a15b3dc04c9c501e39be82e2a,
+  MiniGamePrefab: {fileID: 2193989078972904609, guid: 5f7c5be5a0f633f46afaee8fc34ebd9c,
     type: 3}
---- !u!82 &1689427494280006136
+--- !u!82 &4699878362442595910
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8688599462787907666}
+  m_GameObject: {fileID: 2519082050692292720}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0983a2b0b907cd947a282e4dd4d70518, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.3
-  m_Pitch: 1.5
+  m_audioClip: {fileID: 8300000, guid: 7f42f7fd0281e094086c0e6da441f447, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0

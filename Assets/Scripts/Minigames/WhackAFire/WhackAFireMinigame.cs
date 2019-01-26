@@ -40,8 +40,19 @@ public class WhackAFireMinigame : Minigame
 
     public override void EndGame()
     {
+        GameManger.Instance.ProblemsTriggers[GameManger.Instance.RandomProblem].ProblemParticleSystem.Stop();
+        GameManger.Instance.TimerController.StopCoroutine(GameManger.Instance.TimerController.ClocksTicking());
+        GameManger.Instance.FixedProblem = true;
+        StartCoroutine(GameManger.Instance.ProblemFixedTextShower());
+        GameManger.Instance.TimerController.StopTimer();
+
+        GameManger.Instance.CurrentProblemTrigger.gameObject.SetActive(false);
+
+        MinigameStarted = false;
+        GameManger.Instance.CashManager.AddMoney((int)(GameManger.Instance.TimerController.TimePassed * 100));
+        Destroy(transform.parent.gameObject, 2);
+        CursorLockManager.ReleaseMouse(this);
         base.EndGame();
-        Destroy(gameObject, 2);
     }
 
     public override bool HasEnded
