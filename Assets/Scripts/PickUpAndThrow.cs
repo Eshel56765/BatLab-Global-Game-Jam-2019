@@ -30,7 +30,7 @@ public class PickUpAndThrow : MonoBehaviour
                     HeldObject.transform.parent = null;
                     HeldObject.GetComponent<Rigidbody>().isKinematic = false;
                     HeldObject.GetComponent<Rigidbody>().mass = 4;
-                    if (!HeldObject.name.Contains("Couch")&&!HeldObject.name.Contains("Flowers"))
+                    if (HeldObject.GetComponent<BoxCollider>()!=null)
                     {
                         HeldObject.GetComponent<BoxCollider>().enabled = true;
                     }
@@ -53,7 +53,7 @@ public class PickUpAndThrow : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(other.gameObject.name.Contains("Cube."))
+                if(other.gameObject.name.Contains("Cube.") || other.gameObject.name.Contains("TV"))
                 {
                     HeldObject = other.gameObject.transform.parent.gameObject;
                     HeldObject.transform.parent = Shoulder.transform;
@@ -98,6 +98,7 @@ public class PickUpAndThrow : MonoBehaviour
                         door.transform.eulerAngles = new Vector3(door.transform.eulerAngles.x, 90, door.transform.eulerAngles.z);
                     }
                 }
+
 
             }
         }
