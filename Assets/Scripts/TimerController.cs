@@ -52,10 +52,10 @@ public class TimerController : MonoBehaviour
 
     public void ResetTime()
     {
+        StopCoroutine(Ticker);
         totalTime = StartingTime;
         timeElapsed = 0;
         Timer.fillAmount = 1;
-        Ticker = StartCoroutine(ClocksTicking());
     }
 
     public void StopTimer()

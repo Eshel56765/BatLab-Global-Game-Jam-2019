@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class GameManger : MonoBehaviour
@@ -52,18 +53,12 @@ public class GameManger : MonoBehaviour
         StartCoroutine(Flow());
         CursorLockManager.ReleaseMouse(this);
         RenderSettings.fog = false;
-        TimerController.Faild += HeFaildBigTime;
+        TimerController.Faild += () => { StartCoroutine(WhenHeFailsBigTime()); };
 
         RandomProblem = Random.Range(0, ProblemsTriggers.Count);
         CurrentProblemTrigger = Instantiate(ProblemsTriggers[RandomProblem].ProblemTrigger).gameObject;
         ProblemsTriggers[RandomProblem].ProblemParticleSystem.Play();
         FixedProblem = false;
-    }
-
-    private void HeFaildBigTime()
-    {
-        CashManager.AddMoney(-100);
-        TimerController.gameObject.SetActive(false);
     }
 
     private IEnumerator Flow()
@@ -77,6 +72,7 @@ public class GameManger : MonoBehaviour
 
                 FixedProblemText.SetActive(false);
                 StartCoroutine(FadeInFadeOut.FadeOut());
+                MoneyFromWorkText.GetComponent<Text>().text = "You Have Gone And Did Them Worksess, You Got 100$ !!";
                 yield return new WaitForSeconds(1f);
                 MoneyFromWorkText.SetActive(true);
                 yield return new WaitForSeconds(3f);
@@ -88,7 +84,9 @@ public class GameManger : MonoBehaviour
                 CashManager.gameObject.SetActive(true);
                 StartCoroutine(RandomaizeGame());
                 StartCoroutine(FadeInFadeOut.FadeIn());
+                CashManager.AddMoney(100);
             }
+
             
             if(PlayerTarnsform.position.y < -10)
             {
@@ -119,5 +117,30 @@ public class GameManger : MonoBehaviour
         FixedProblemText.SetActive(true);
         yield return new WaitForSeconds(3f);
         FixedProblemText.SetActive(false);
+    }
+
+    public IEnumerator WhenHeFailsBigTime()
+    {
+        CashManager.AddMoney(-100);
+
+        TimerController.StopTimer();
+        CashManager.gameObject.SetActive(false);
+
+
+        FixedProblemText.SetActive(false);
+        StartCoroutine(FadeInFadeOut.FadeOut());
+        MoneyFromWorkText.GetComponent<Text>().text = "You Faild To Fix The Problem In Time To Get To Work ,\n You Have Been Charged 100$ !";
+        yield return new WaitForSeconds(1f);
+        MoneyFromWorkText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        MoneyFromWorkText.SetActive(false);
+        yield return new WaitForSeconds(1f);
+
+
+        TimerController.ResetTime();
+        CashManager.gameObject.SetActive(true);
+        StartCoroutine(RandomaizeGame());
+        StartCoroutine(FadeInFadeOut.FadeIn());
+        yield return null;
     }
 }

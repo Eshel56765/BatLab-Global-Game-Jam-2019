@@ -40,7 +40,6 @@ public class FadeInFadeOut : MonoBehaviour
             yield return null;
         }
         BlackScreen.fillAmount = 0;
-        cashManager.AddMoney(100);
         IsFading = false;
     }
 
