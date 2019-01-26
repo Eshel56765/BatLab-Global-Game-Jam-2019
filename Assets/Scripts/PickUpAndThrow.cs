@@ -6,14 +6,16 @@ public class PickUpAndThrow : MonoBehaviour
 {
     public GameObject Shoulder;
     public float Force;
+
     private GameObject HeldObject = null;
-    
+    private AudioSource Splosh;
     private Animator anime;
     private bool firstUpdate = false;
     // Start is called before the first frame update
     void Start()
     {
         anime = gameObject.GetComponent<Animator>();
+        Splosh = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class PickUpAndThrow : MonoBehaviour
                         HeldObject.GetComponent<BoxCollider>().enabled = true;
                     }
                     HeldObject.GetComponent<Rigidbody>().AddForce(transform.forward * Force);
+                    Splosh.Play();
                     HeldObject = null;
                     anime.SetBool("Pick", false);
                     
