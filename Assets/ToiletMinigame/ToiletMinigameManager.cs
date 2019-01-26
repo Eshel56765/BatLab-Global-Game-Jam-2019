@@ -28,6 +28,17 @@ public class ToiletMinigameManager : Minigame
 
     public override void EndGame()
     {
+        GameManger.Instance.ProblemsTriggers[GameManger.Instance.RandomProblem].ProblemParticleSystem.Stop();
+        GameManger.Instance.TimerController.StopCoroutine(GameManger.Instance.TimerController.ClocksTicking());
+        GameManger.Instance.FixedProblem = true;
+        StartCoroutine(GameManger.Instance.ProblemFixedTextShower());
+        GameManger.Instance.TimerController.StopTimer();
+
+        GameManger.Instance.CurrentProblemTrigger.gameObject.SetActive(false);
+
+        MinigameStarted = false;
+        GameManger.Instance.CashManager.AddMoney((int)(GameManger.Instance.TimerController.TimePassed * 100));
+        Destroy(gameObject);
         CursorLockManager.ReleaseMouse(this);
         base.EndGame();
     }

@@ -101,11 +101,13 @@ public class GameManger : MonoBehaviour
         foreach (Problems problem in ProblemsTriggers)
         {
             problem.ProblemParticleSystem.Stop();
-            Destroy(CurrentProblemTrigger);
+            CurrentProblemTrigger.SetActive(false);
+            CurrentProblemTrigger.GetComponent<AudioSource>().Stop();
         }
         RandomProblem = Random.Range(0, ProblemsTriggers.Count);
         CurrentProblemTrigger = Instantiate(ProblemsTriggers[RandomProblem].ProblemTrigger).gameObject;
         ProblemsTriggers[RandomProblem].ProblemParticleSystem.Play();
+        CurrentProblemTrigger.GetComponent<AudioSource>().Play();
         TimerController.ResetTime();
         StartCoroutine(TimerController.ClocksTicking());
         FixedProblem = false;
@@ -125,9 +127,9 @@ public class GameManger : MonoBehaviour
 
         TimerController.StopTimer();
         CashManager.gameObject.SetActive(false);
-
-
         FixedProblemText.SetActive(false);
+
+
         StartCoroutine(FadeInFadeOut.FadeOut());
         MoneyFromWorkText.GetComponent<Text>().text = "You Faild To Fix The Problem In Time To Get To Work ,\n You Have Been Charged 100$ !";
         yield return new WaitForSeconds(1f);

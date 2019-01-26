@@ -49,7 +49,7 @@ public class WhackAFireMinigame : Minigame
 
         MinigameStarted = false;
         GameManger.Instance.CashManager.AddMoney((int)(GameManger.Instance.TimerController.TimePassed * 100));
-        Destroy(transform.parent.gameObject, 2);
+        Destroy(gameObject);
         CursorLockManager.ReleaseMouse(this);
         base.EndGame();
     }

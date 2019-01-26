@@ -18,6 +18,7 @@ public class CursorLockManager : StaticBehavior<CursorLockManager>
     {
         if (!Instance.Users.Contains(Caller))
             Instance.Users.Add(Caller);
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public static void ReleaseMouse(object Caller)
@@ -26,6 +27,7 @@ public class CursorLockManager : StaticBehavior<CursorLockManager>
         if (Instance.Users.Count == 0)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }

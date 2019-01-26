@@ -78,8 +78,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Left click to pick up,\nLeft click to replace, \nRight click to put back,
-    \nR to rotate"
+  m_Text: "Left click to pick up,\nLeft click again to switch, \nRight click to put
+    down, \nR to rotate"
 --- !u!1 &7889421247439488638
 GameObject:
   m_ObjectHideFlags: 0

@@ -368,23 +368,26 @@ public class PipeMinigamePipe : MonoBehaviour, IPointerClickHandler
 
     void IPointerClickHandler.OnPointerClick(PointerEventData data)
     {
-        PipeNodes selectedNodes = (PipeNodes)(-1);
-        if (null != Selected)
+        if (data.button == PointerEventData.InputButton.Left)
         {
-            Selected.Element.enabled = true;
-            selectedNodes = Selected.Nodes;
-            Selected.SetTypes(selectedNodes, false);
-            Selected.SetTypes(Nodes, true);
-            Selected.SetFill(FillType.None);
-            SetTypes(Nodes, false);
-            SetTypes(selectedNodes, true);
-            Selected = null;
-        }
-        else
-        {
-            Selected = this;
-            Element.enabled = false;
-            SetFill(FillType.None);
+            PipeNodes selectedNodes = (PipeNodes)(-1);
+            if (null != Selected)
+            {
+                Selected.Element.enabled = true;
+                selectedNodes = Selected.Nodes;
+                Selected.SetTypes(selectedNodes, false);
+                Selected.SetTypes(Nodes, true);
+                Selected.SetFill(FillType.None);
+                SetTypes(Nodes, false);
+                SetTypes(selectedNodes, true);
+                Selected = null;
+            }
+            else
+            {
+                Selected = this;
+                Element.enabled = false;
+                SetFill(FillType.None);
+            }
         }
     }
 }
