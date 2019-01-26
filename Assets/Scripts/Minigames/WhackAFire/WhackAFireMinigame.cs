@@ -11,9 +11,8 @@ public class WhackAFireMinigame : Minigame
 
     public WhackAFireFire[,] Fires = new WhackAFireFire[3, 3];
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
     {
-        yield return new WaitForSeconds(2);
         StartGame();
     }
 

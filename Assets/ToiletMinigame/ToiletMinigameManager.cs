@@ -18,6 +18,7 @@ public class ToiletMinigameManager : Minigame
         ToiletBowlController.Catch += CatchCallback;
 
         PumpsText.text = "Only " + "<color=red>" + CatchCounter + "</color>" + " More To Release The Blockage";
+        StartGame();
     }
 
     public override void StartGame()
