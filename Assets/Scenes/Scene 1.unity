@@ -1126,13 +1126,84 @@ PrefabInstance:
         type: 3}
       propertyPath: ProblemsTriggers.Array.data[0]
       value: 
-      objectReference: {fileID: 8688599462787907666, guid: 45999c662a43f5c45b2a61a8b795e0c5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
         type: 3}
       propertyPath: ProblemsTriggers.Array.data[1]
       value: 
-      objectReference: {fileID: 4298296265585637793, guid: 45ded82c8c7ae7d4da8d093ea071d083,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: RandomProblem
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 1584156011}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: CurrentProblemTrigger
+      value: 
+      objectReference: {fileID: 199285371}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: MoneyFromWorkText
+      value: 
+      objectReference: {fileID: 320109407}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: FixedProblemText
+      value: 
+      objectReference: {fileID: 971506900}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[0].ProblemName
+      value: poop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[1].ProblemName
+      value: Tap
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[0].ProblemParticleSystem
+      value: 
+      objectReference: {fileID: 1915398280}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[0].ProblemTrigger
+      value: 
+      objectReference: {fileID: 7148419088467894985, guid: 45ded82c8c7ae7d4da8d093ea071d083,
+        type: 3}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[1].ProblemTrigger
+      value: 
+      objectReference: {fileID: 1329247479315368849, guid: 45999c662a43f5c45b2a61a8b795e0c5,
+        type: 3}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[1].ProblemParticleSystem
+      value: 
+      objectReference: {fileID: 2124120356}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[2].ProblemName
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[2].ProblemParticleSystem
+      value: 
+      objectReference: {fileID: 2124120356}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: ProblemsTriggers.Array.data[2].ProblemTrigger
+      value: 
+      objectReference: {fileID: 1329247479315368849, guid: 45999c662a43f5c45b2a61a8b795e0c5,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84791cd729d63ad4eb1cfc19e5fedc9f, type: 3}
@@ -2342,6 +2413,12 @@ Transform:
   m_Father: {fileID: 232578413}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &199285371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5092444293180498994, guid: 77e86a6fee02d0649b650e5a0fcef302,
+    type: 3}
+  m_PrefabInstance: {fileID: 1882548589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &199943188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,6 +3767,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309696733}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &320109407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320109408}
+  - component: {fileID: 320109411}
+  - component: {fileID: 320109410}
+  - component: {fileID: 320109409}
+  m_Layer: 0
+  m_Name: FuckMoneysGetBitches
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &320109408
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320109407}
+  m_LocalRotation: {x: -2.3283064e-10, y: -0, z: -0.0000000018626451, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000068343885}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1358355211}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000091552734, y: 0}
+  m_SizeDelta: {x: 1200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &320109409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320109407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda08604f3dcd004f8fa844f67eeabe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thang: {fileID: 320109410}
+--- !u!114 &320109410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320109407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
+    m_FontSize: 127
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 129
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'You Have Gone And Did Them Worksess,
+
+    You Got 100$ !!'
+--- !u!222 &320109411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320109407}
+  m_CullTransparentMesh: 0
 --- !u!1 &326815608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7348,7 +7520,7 @@ PrefabInstance:
     - target: {fileID: 6325156461844171393, guid: ab92a1a91b0def24db7fce4c08153fbb,
         type: 3}
       propertyPath: StartingTime
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab92a1a91b0def24db7fce4c08153fbb, type: 3}
@@ -10585,6 +10757,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729cd37f40ee23146a2fb43dae1a6c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &971506900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971506901}
+  - component: {fileID: 971506904}
+  - component: {fileID: 971506903}
+  - component: {fileID: 971506902}
+  m_Layer: 5
+  m_Name: ProblemFixedText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &971506901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971506900}
+  m_LocalRotation: {x: -2.3283064e-10, y: -0, z: -0.0000000018626451, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000015258787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1584156011}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00018310547, y: 125.29999}
+  m_SizeDelta: {x: 600, y: 65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &971506902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971506900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &971506903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971506900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You Fixed Your House! , Now You Can Go To Work Or Just Chiil Back At Home..
+--- !u!222 &971506904
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971506900}
+  m_CullTransparentMesh: 0
 --- !u!1 &973687744
 GameObject:
   m_ObjectHideFlags: 0
@@ -18466,7 +18733,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.00005149644}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 320109408}
   m_Father: {fileID: 1584156011}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20094,7 +20362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1572094860
 Transform:
   m_ObjectHideFlags: 0
@@ -20235,6 +20503,7 @@ RectTransform:
   - {fileID: 1882548590}
   - {fileID: 649200565}
   - {fileID: 1358355211}
+  - {fileID: 971506901}
   m_Father: {fileID: 1687258585}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22609,7 +22878,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1882548589}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 199285371}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b2aeeee85cf59849bd34011cbf47989, type: 3}
@@ -22783,7 +23052,8 @@ PrefabInstance:
       propertyPath: PlayerCamera
       value: 
       objectReference: {fileID: 1687258584}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4947491465407335345, guid: af36bbf81187e5544aa4f36c8eecc816, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: af36bbf81187e5544aa4f36c8eecc816, type: 3}
 --- !u!1 &1805391239
 GameObject:
@@ -29124,7 +29394,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -35753,7 +36023,7 @@ GameObject:
   - component: {fileID: 2124120356}
   - component: {fileID: 2124120355}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: TapIsOverFlowing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35837,7 +36107,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -40860,6 +41130,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System
       objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086729281130575650, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40913,21 +41198,6 @@ PrefabInstance:
     - target: {fileID: 2086729281130575650, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
