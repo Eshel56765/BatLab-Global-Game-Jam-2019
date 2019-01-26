@@ -14,12 +14,14 @@ public class TimerController : MonoBehaviour
     [HideInInspector]
     public float timeElapsed, totalTime ,TimePassed;
 
+    private Coroutine Ticker;
+
     void Start()
     {
         StartingTime *= 60;
         totalTime = StartingTime;
         Timer.fillAmount = 1;
-        StartCoroutine(ClocksTicking());
+        Ticker = StartCoroutine(ClocksTicking());
     }
 
     public IEnumerator ClocksTicking()
@@ -53,11 +55,11 @@ public class TimerController : MonoBehaviour
         totalTime = StartingTime;
         timeElapsed = 0;
         Timer.fillAmount = 1;
-        StartCoroutine(ClocksTicking());
+        Ticker = StartCoroutine(ClocksTicking());
     }
 
     public void StopTimer()
     {
-        StopCoroutine(ClocksTicking());
+        StopCoroutine(Ticker);
     }
 }

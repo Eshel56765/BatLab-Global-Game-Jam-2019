@@ -16,6 +16,8 @@ public class GameManger : MonoBehaviour
     public bool FixedProblem;
     public GameObject FixedProblemText;
 
+    public Transform PlayerTarnsform;
+
     public int RandomProblem;
     public CashManager CashManager;
     public FadeInFadeOut FadeInFadeOut;
@@ -88,6 +90,10 @@ public class GameManger : MonoBehaviour
                 StartCoroutine(FadeInFadeOut.FadeIn());
             }
             
+            if(PlayerTarnsform.position.y < -10)
+            {
+                PlayerTarnsform.position = new Vector3(1.62f, 1.16f, 1.834f);
+            }
 
             yield return null;
         }

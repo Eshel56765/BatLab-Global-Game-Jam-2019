@@ -1432,6 +1432,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1329247479315368849, guid: 45999c662a43f5c45b2a61a8b795e0c5,
         type: 3}
+    - target: {fileID: 5222261500067770383, guid: 84791cd729d63ad4eb1cfc19e5fedc9f,
+        type: 3}
+      propertyPath: PlayerTarnsform
+      value: 
+      objectReference: {fileID: 1562979216}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84791cd729d63ad4eb1cfc19e5fedc9f, type: 3}
 --- !u!1 &97071462
@@ -9153,7 +9158,7 @@ PrefabInstance:
     - target: {fileID: 6325156461844171393, guid: ab92a1a91b0def24db7fce4c08153fbb,
         type: 3}
       propertyPath: StartingTime
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab92a1a91b0def24db7fce4c08153fbb, type: 3}
@@ -10066,7 +10071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726582547}
   m_Layer: 0
-  m_Name: DoorModel
+  m_Name: MaindoorModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15878,7 +15883,7 @@ PrefabInstance:
     - target: {fileID: 7659299971620177926, guid: 51b769158437d714098d209f1ae7924c,
         type: 3}
       propertyPath: m_Name
-      value: DoorMat
+      value: MaindoorMat
       objectReference: {fileID: 0}
     - target: {fileID: 7659299971620177947, guid: 51b769158437d714098d209f1ae7924c,
         type: 3}
@@ -21485,26 +21490,26 @@ Transform:
   - {fileID: 823488354}
   - {fileID: 732458650}
   - {fileID: 301298252}
-  - {fileID: 858298867}
+  - {fileID: 630704755}
   - {fileID: 1005060132}
-  - {fileID: 551559137}
-  - {fileID: 381123425}
   - {fileID: 2004842715}
+  - {fileID: 858298867}
+  - {fileID: 381123425}
   - {fileID: 1365445155}
   - {fileID: 1504633854}
   - {fileID: 320415596}
   - {fileID: 470992235}
   - {fileID: 2113122106}
+  - {fileID: 551559137}
   - {fileID: 1332063657}
   - {fileID: 1355724191}
   - {fileID: 226319357}
-  - {fileID: 630704755}
   - {fileID: 775019422}
   - {fileID: 1297063794}
-  - {fileID: 1709594654}
   - {fileID: 52461594}
-  - {fileID: 2071582536}
+  - {fileID: 1709594654}
   - {fileID: 168235451}
+  - {fileID: 2071582536}
   - {fileID: 1191814864}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -39654,7 +39659,7 @@ GameObject:
   - component: {fileID: 2048000068}
   - component: {fileID: 2048000067}
   m_Layer: 0
-  m_Name: Door
+  m_Name: maindoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45479,6 +45484,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System
       objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086729281130575650, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45532,21 +45552,6 @@ PrefabInstance:
     - target: {fileID: 2086729281130575650, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3906454852123429816, guid: 9f398e8c359c9854497a44e6bd1cfaf3,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
