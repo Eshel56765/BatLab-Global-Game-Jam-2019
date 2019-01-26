@@ -19,6 +19,8 @@ public class GameManger : MonoBehaviour
 
     public Transform PlayerTarnsform;
 
+    private float TimeToCloseText = 0;
+
     public int RandomProblem;
     public CashManager CashManager;
     public FadeInFadeOut FadeInFadeOut;
@@ -65,6 +67,11 @@ public class GameManger : MonoBehaviour
     {
         while (true)
         {
+            TimeToCloseText += Time.deltaTime;
+
+            if(TimeToCloseText >= 6)
+                FixedProblemText.SetActive(false);
+
             if (Input.GetKeyDown(KeyCode.F) && FadeInFadeOut.CanGoToWork && !FadeInFadeOut.IsFading && FixedProblem)
             {
                 TimerController.StopTimer();
@@ -114,11 +121,10 @@ public class GameManger : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator ProblemFixedTextShower()
+    public void ProblemFixedTextShower()
     {
         FixedProblemText.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        FixedProblemText.SetActive(false);
+        TimeToCloseText = 0;
     }
 
     public IEnumerator WhenHeFailsBigTime()

@@ -42,7 +42,7 @@ public class WhackAFireMinigame : Minigame
         GameManger.Instance.ProblemsTriggers[GameManger.Instance.RandomProblem].ProblemParticleSystem.Stop();
         GameManger.Instance.TimerController.StopCoroutine(GameManger.Instance.TimerController.ClocksTicking());
         GameManger.Instance.FixedProblem = true;
-        StartCoroutine(GameManger.Instance.ProblemFixedTextShower());
+        GameManger.Instance.ProblemFixedTextShower();
         GameManger.Instance.TimerController.StopTimer();
 
         GameManger.Instance.CurrentProblemTrigger.gameObject.SetActive(false);
