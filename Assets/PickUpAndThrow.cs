@@ -72,6 +72,18 @@ public class PickUpAndThrow : MonoBehaviour
                     anime.SetBool("Pick", true);
                     firstUpdate = true;
                 }
+                if(other.gameObject.name.Contains("Door"))
+                {
+                    GameObject door = other.transform.parent.gameObject;
+                    if(door.transform.eulerAngles.y==90)
+                    {
+                        door.transform.eulerAngles = new Vector3(door.transform.eulerAngles.x, 180, door.transform.eulerAngles.z);
+                    }
+                    else
+                    {
+                        door.transform.eulerAngles = new Vector3(door.transform.eulerAngles.x, 90, door.transform.eulerAngles.z);
+                    }
+                }
             }
         }
     }
