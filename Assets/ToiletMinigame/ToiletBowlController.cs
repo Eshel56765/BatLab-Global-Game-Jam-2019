@@ -29,6 +29,7 @@ public class ToiletBowlController : MonoBehaviour
         mousePosition.z = 0;
 
         mousePosition.x = Mathf.Lerp(0, 1, mousePosition.x);
+        Debug.Log(mousePosition.x);
 
         RectTransform.pivot = mousePosition;
     }
