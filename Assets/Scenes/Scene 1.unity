@@ -26504,6 +26504,21 @@ PrefabInstance:
       propertyPath: PlayerCamera
       value: 
       objectReference: {fileID: 1687258584}
+    - target: {fileID: 4934716853168484752, guid: af36bbf81187e5544aa4f36c8eecc816,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934716853168484752, guid: af36bbf81187e5544aa4f36c8eecc816,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934716853168484752, guid: af36bbf81187e5544aa4f36c8eecc816,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4947491465407335345, guid: af36bbf81187e5544aa4f36c8eecc816,
         type: 3}
       propertyPath: Shoulder
