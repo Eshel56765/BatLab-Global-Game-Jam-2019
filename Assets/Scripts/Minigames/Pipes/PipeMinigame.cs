@@ -185,6 +185,7 @@ public class PipeMinigame : Minigame
             GameManger.Instance.TimerController.StopCoroutine(GameManger.Instance.TimerController.ClocksTicking());
             GameManger.Instance.FixedProblem = true;
             StartCoroutine(GameManger.Instance.ProblemFixedTextShower());
+            GameManger.Instance.TimerController.StopTimer();
 
             MinigameStarted = false;
             GameManger.Instance.CashManager.AddMoney((int)(GameManger.Instance.TimerController.TimePassed * 100));

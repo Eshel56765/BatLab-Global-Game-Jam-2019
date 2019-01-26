@@ -53,5 +53,11 @@ public class TimerController : MonoBehaviour
         totalTime = StartingTime;
         timeElapsed = 0;
         Timer.fillAmount = 1;
+        StartCoroutine(ClocksTicking());
+    }
+
+    public void StopTimer()
+    {
+        StopCoroutine(ClocksTicking());
     }
 }

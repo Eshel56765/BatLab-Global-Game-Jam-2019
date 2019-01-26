@@ -70,7 +70,7 @@ public class GameManger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F) && FadeInFadeOut.CanGoToWork && !FadeInFadeOut.IsFading && FixedProblem)
             {
-                TimerController.gameObject.SetActive(false);
+                TimerController.StopTimer();
                 CashManager.gameObject.SetActive(false);
 
                 FixedProblemText.SetActive(false);
@@ -81,7 +81,7 @@ public class GameManger : MonoBehaviour
                 MoneyFromWorkText.SetActive(false);
                 yield return new WaitForSeconds(1f);
 
-                TimerController.gameObject.SetActive(true);
+                
                 TimerController.ResetTime();
                 CashManager.gameObject.SetActive(true);
                 StartCoroutine(RandomaizeGame());
